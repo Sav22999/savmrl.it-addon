@@ -1,6 +1,6 @@
 <h1 align="center">
     <br>
-    <img width="70" src=“./images/icon-big.png" alt=“Icon" />
+    <img width="70" src="./images/icon-big.png" alt="Icon" />
     <br>
     savmrl.it
     <br>
@@ -32,7 +32,7 @@ To support me, you can do a donation :smile: with **LiberaPay** or **PayPal**:
 
 ### Screenshots
 
-<img src=“images/banner.png" width=“300px"></img>
+<img src="images/banner.png" width="300px"></img>
 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Sav22999/savmrl.it) [![Generic badge](https://img.shields.io/badge/developed%20by-Sav22999-lightgrey.svg)](https://saveriomorelli.com)
