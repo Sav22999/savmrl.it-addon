@@ -1,6 +1,6 @@
 <h1 align="center">
     <br>
-    <img width="70" src="./images/icon-big.png" alt="Icon" />
+    <img width="70" src="./images/icon.png" alt="Small icon" /><img width="70" src="./images/icon-big.png" alt="Big icon" />
     <br>
     savmrl.it
     <br>
