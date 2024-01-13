@@ -1,26 +1,15 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "savmrl.it",
   "version": "1.0",
-  "description": "A free shortener link and redirect service.",
-  "applications": {
-    "gecko": {
-      "id": "savmrl.it@saveriomorelli.com"
-    }
-  },
-  "author": "Saverio Morelli (Sav22999)",
+  "description": "An anonymous and free shortener link and redirect service.",
   "permissions": [
     "tabs"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
-  "icons": {
-    "16": "/images/icon.png",
-    "48": "/images/icon.png",
-    "128": "/images/icon.png"
-  },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "/images/icon.png",
       "48": "/images/icon.png",
