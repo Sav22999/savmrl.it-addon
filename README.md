@@ -18,7 +18,7 @@ You can use this service without any registration, just go to http://savmrl.it a
 
 The add-on permits you to have a shortcut: instead of copy the link you want to reduce and then paste it on the website, you’ll be able to create a reduced link **just pressing the add-on icon** on your toolbar. Easy, right?
 
-You can download the add-on on [Firefox Add-ons](), [Google Chrome Web Store]() and [Microsoft Edge Add-ons]()
+You can download the add-on on [Firefox Add-ons](https://addons.mozilla.org/en-GB/firefox/addon/savmrl-it/), [Google Chrome Web Store](https://chromewebstore.google.com/detail/pkbjoeedhjjokllfhgcapbbihianeemn) and [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/jdgcfpdoiojfebhafmihkihficfnpahk)
 
 ### Support me and my work
 
