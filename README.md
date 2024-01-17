@@ -2,17 +2,19 @@
     <br>
     <img width="70" src="./images/icon.png" alt="Small icon" /><img width="70" src="./images/icon-big.png" alt="Big icon" />
     <br>
-    savmrl.it
+    savmrl.it add-on
     <br>
 </h1>
 
-This is the official add-on for the https://savmrl.it service.
+This is the official add-on for the https://savmrl.it project.
 
 ### What savmrl.it is
 
 savmrl.it is an anonymous and free shortener and redirect service. It permits to get shorter links and also to track how many times your links have been opened.
 
 You can use this service without any registration, just go to http://savmrl.it and start to use it!
+
+See the repo https://github.com/Sav22999/savmrl.it
 
 ### What is the add-on and where download it
 
@@ -35,4 +37,4 @@ To support me, you can do a donation :smile: with **LiberaPay** or **PayPal**:
 <img src="images/banner.png" width="300px"></img>
 
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Sav22999/savmrl.it) [![Generic badge](https://img.shields.io/badge/developed%20by-Sav22999-lightgrey.svg)](https://saveriomorelli.com)
+![GitHub last commit](https://img.shields.io/github/last-commit/Sav22999/savmrl.it-addon) [![Generic badge](https://img.shields.io/badge/developed%20by-Sav22999-lightgrey.svg)](https://saveriomorelli.com)
