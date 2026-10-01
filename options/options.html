@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>savmrl.it — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <img src="/images/icon.png" alt="" class="logo">
+    <h1>savmrl.it</h1>
+  </div>
+
+  <div class="section">
+    <h2 data-i18n="button-behavior"></h2>
+
+    <label class="option-card" data-value="popup">
+      <input type="radio" name="buttonBehavior" value="popup">
+      <div class="option-radio"></div>
+      <div class="option-content">
+        <div class="option-title" data-i18n="behavior-popup"></div>
+        <div class="option-desc" data-i18n="behavior-popup-desc"></div>
+      </div>
+    </label>
+
+    <label class="option-card" data-value="quick-create">
+      <input type="radio" name="buttonBehavior" value="quick-create">
+      <div class="option-radio"></div>
+      <div class="option-content">
+        <div class="option-title" data-i18n="behavior-quick"></div>
+        <div class="option-desc" data-i18n="behavior-quick-desc"></div>
+      </div>
+    </label>
+  </div>
+
+  <div class="section">
+    <h2 data-i18n="language"></h2>
+    <div class="lang-select-wrapper">
+      <select id="lang-select" class="lang-select"></select>
+    </div>
+  </div>
+
+  <div class="section" id="account-section">
+    <h2 data-i18n="account"></h2>
+    <div id="account-info" class="account-info"></div>
+  </div>
+
+  <div class="footer">
+    <a href="https://savmrl.it" target="_blank" rel="noopener">savmrl.it</a>
+    <span class="separator">&middot;</span>
+    <span class="version">v2.0</span>
+  </div>
+</div>
+
+<script src="/i18n.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>savmrl.it</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="https://savmrl.it" target="_blank" rel="noopener" class="header-brand">
+    <img src="/images/icon.png" alt="" class="header-logo">
+    <span class="header-title">savmrl.it</span>
+  </a>
+  <div class="header-actions" id="header-actions"></div>
+</header>
+
+<!-- Login View -->
+<div id="view-login" class="view">
+  <div class="view-content">
+    <h2 data-i18n="login"></h2>
+    <p class="subtitle" data-i18n="login-subtitle"></p>
+    <div id="login-error" class="error-msg hidden"></div>
+    <form id="login-form">
+      <input type="email" id="login-email" class="input" data-i18n-placeholder="email" required>
+      <input type="password" id="login-password" class="input" data-i18n-placeholder="password" required>
+      <button type="submit" id="login-submit" class="btn btn-primary btn-block">
+        <span class="btn-text" data-i18n="login"></span>
+        <span class="btn-spinner hidden"></span>
+      </button>
+    </form>
+    <p class="auth-link"><span data-i18n="no-account"></span> <a href="https://savmrl.it/account/register/" target="_blank" rel="noopener" data-i18n="signup"></a></p>
+  </div>
+</div>
+
+<!-- 2FA View -->
+<div id="view-2fa" class="view hidden">
+  <div class="view-content">
+    <div class="auth-icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm-3 8V7a3 3 0 116 0v3H9z" fill="currentColor"/></svg>
+    </div>
+    <h2 data-i18n="verification"></h2>
+    <p class="subtitle" data-i18n="enter-2fa"></p>
+    <div id="twofa-error" class="error-msg hidden"></div>
+    <form id="twofa-form">
+      <input type="text" id="twofa-code" class="input otp-input" placeholder="000000" maxlength="6" pattern="[0-9]{6}" inputmode="numeric" autocomplete="one-time-code" required>
+      <button type="submit" id="twofa-submit" class="btn btn-primary btn-block">
+        <span class="btn-text" data-i18n="verify"></span>
+        <span class="btn-spinner hidden"></span>
+      </button>
+    </form>
+    <button id="twofa-back" class="btn-link" data-i18n="back-to-login"></button>
+  </div>
+</div>
+
+<!-- Main View -->
+<div id="view-main" class="view hidden">
+  <div class="tab-bar">
+    <button class="tab active" data-tab="create">
+      <svg viewBox="0 0 24 24" fill="none" class="tab-icon"><path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span data-i18n="create"></span>
+    </button>
+    <button class="tab" data-tab="links">
+      <svg viewBox="0 0 24 24" fill="none" class="tab-icon"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-i18n="my-links"></span>
+    </button>
+  </div>
+
+  <!-- Create Tab -->
+  <div id="tab-create" class="tab-content">
+    <div id="create-form-container">
+      <div class="mode-switcher">
+        <button class="mode-btn active" data-mode="basic" data-i18n="basic"></button>
+        <button class="mode-btn" data-mode="advanced" data-i18n="advanced"></button>
+      </div>
+
+      <div class="url-input-group">
+        <input type="url" id="link-url" class="input input-url" data-i18n-placeholder="url-placeholder" required>
+      </div>
+
+      <div id="advanced-options" class="advanced-options hidden">
+        <div class="option-row">
+          <label for="custom-name" data-i18n="custom-name"></label>
+          <input type="text" id="custom-name" class="input input-sm" data-i18n-placeholder="optional">
+        </div>
+        <div class="option-row">
+          <label for="max-openings" data-i18n="max-openings"></label>
+          <input type="text" id="max-openings" class="input input-sm input-center" value="∞">
+        </div>
+        <div class="option-row">
+          <label for="expiry-date" data-i18n="expiry-date"></label>
+          <input type="text" id="expiry-date" class="input input-sm input-center" value="∞">
+        </div>
+        <div class="option-row">
+          <label for="access-code" data-i18n="access-code"></label>
+          <input type="password" id="access-code" class="input input-sm" data-i18n-placeholder="optional">
+        </div>
+        <div class="option-row">
+          <label for="redirect-delay" data-i18n="redirect-delay"></label>
+          <input type="number" id="redirect-delay" class="input input-sm input-center" min="5" max="30" placeholder="sec">
+        </div>
+      </div>
+
+      <p class="terms-notice" id="terms-notice"></p>
+
+      <button id="create-btn" class="btn btn-primary btn-block">
+        <span class="btn-text" data-i18n="create-link"></span>
+        <span class="btn-spinner hidden"></span>
+      </button>
+
+      <div id="create-error" class="error-msg hidden"></div>
+    </div>
+
+    <div id="create-result" class="result-card hidden">
+      <div class="result-badge" id="result-badge">
+        <svg viewBox="0 0 24 24" fill="none" class="result-badge-icon"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="link-created"></span>
+      </div>
+      <div class="result-url-box">
+        <span id="result-url" class="result-url"></span>
+        <button id="result-copy-btn" class="btn-copy" title="Copy link">
+          <svg viewBox="0 0 24 24" fill="none" class="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="1.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" class="icon-check hidden"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div id="result-dest" class="result-dest"></div>
+      <button id="create-another-btn" class="btn btn-secondary btn-block" data-i18n="create-another"></button>
+    </div>
+  </div>
+
+  <!-- Links Tab -->
+  <div id="tab-links" class="tab-content hidden">
+    <div id="links-list" class="links-list"></div>
+    <div id="links-sentinel" class="links-sentinel"></div>
+    <div id="links-loading" class="links-loading hidden">
+      <span class="spinner"></span>
+    </div>
+    <div id="links-empty" class="empty-state hidden">
+      <svg viewBox="0 0 24 24" fill="none" class="empty-icon"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.172 13.828a4 4 0 005.656 0l4-4a4 4 0 10-5.656-5.656l-1.102 1.101" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p data-i18n="no-links"></p>
+      <p class="empty-hint" data-i18n="no-links-hint"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast hidden">
+  <span id="toast-text"></span>
+</div>
+
+<script src="/i18n.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

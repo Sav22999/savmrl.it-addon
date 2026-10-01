@@ -1,31 +1,43 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "savmrl.it",
-  "version": "1.0",
+  "version": "2.0",
   "description": "A free shortener link and redirect service.",
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "savmrl.it@saveriomorelli.com"
     }
   },
   "author": "Saverio Morelli (Sav22999)",
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://savmrl.it/*",
+    "https://www.savmrl.it/*"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "service_worker": "background.js"
   },
-  "icons": {
-    "16": "/images/icon.png",
-    "48": "/images/icon.png",
-    "128": "/images/icon.png"
-  },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "/images/icon.png",
       "48": "/images/icon.png",
       "128": "/images/icon.png"
     },
-    "default_title": "savmrl.it"
+    "default_title": "savmrl.it",
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  },
+  "icons": {
+    "16": "/images/icon.png",
+    "48": "/images/icon.png",
+    "128": "/images/icon.png"
   }
 }
