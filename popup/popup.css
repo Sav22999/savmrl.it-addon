@@ -60,6 +60,10 @@ header {
   flex-shrink: 0;
 }
 
+header:has(.header-actions:empty) {
+  justify-content: center;
+}
+
 .header-brand,
 .header-brand:hover,
 .header-brand:visited,
@@ -84,6 +88,7 @@ header {
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1;
+  transform: translateY(1px);
 }
 
 .header-actions {
